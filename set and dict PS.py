@@ -1,27 +1,57 @@
+# Set and Dictionary Interview Questions – Problem Statements and Explanations
+
+# Add Element to Set
+# Problem: Add an element to a set.
+# Explanation: Use add() method to add an element to a set.
 # Input: {1, 2, 3}, add 4
+
 s = {1, 2, 3}
 s.add(4)
+
 # Output: {1, 2, 3, 4}
 print(s)
 
+
+# Remove Element from Set
 # Problem: Remove a specific element from a set.
 # Explanation: Use remove() or discard() to avoid KeyError.
-
 # Input: {1, 2, 3}, remove 2
+
 s = {1, 2, 3}
 s.discard(2)
+
+# Output: {1, 3}
 print(s)
+
 
 # Union of Two Sets
 # Problem: Find union of two sets.
 # Explanation: Use | operator or union() method.
-
 # Input: {1, 2}, {2, 3}
+
 set1 = {1, 2}
 set2 = {2, 3}
+
 result = set1 | set2
+
 # Output: {1, 2, 3}
 print(result)
+
+
+# Intersection of Two Sets
+# Problem: Find common elements in two sets.
+# Explanation: Use & operator or intersection().
+# Input: {1, 2, 3}, {2, 3, 4}
+
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+
+result = set1 & set2
+
+# Output: {2, 3}
+print(result)
+
+
 
 # Problem: Find common elements in two sets.
 set1 = {1, 2, 3}
@@ -29,11 +59,7 @@ set2 = {2, 3, 4}
 common = set1 & set2
 print(common)
 
-#intersection of sets
-a={1,2,3}
-b={3,5,6}
-result= a & b
-print(result)
+
 
 # difference of sets
 a={1,2,3}
