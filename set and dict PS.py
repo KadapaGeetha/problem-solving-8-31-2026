@@ -52,15 +52,6 @@ result = set1 & set2
 print(result)
 
 
-
-# Problem: Find common elements in two sets.
-set1 = {1, 2, 3}
-set2 = {2, 3, 4}
-common = set1 & set2
-print(common)
-
-
-
 # difference of sets
 a={1,2,3}
 b={2,3}
