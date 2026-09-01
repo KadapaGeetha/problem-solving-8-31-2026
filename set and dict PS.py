@@ -1,18 +1,33 @@
-#add element to a set
-a = {1, 2, 3}
-a.add(4)
-print(a)
+# Input: {1, 2, 3}, add 4
+s = {1, 2, 3}
+s.add(4)
+# Output: {1, 2, 3, 4}
+print(s)
 
-#remove elements from set
-a={1,2,3}
-a.discard(2)
-print(a)
+# Problem: Remove a specific element from a set.
+# Explanation: Use remove() or discard() to avoid KeyError.
 
-#union of two sets
-a={1,2,3}
-b={4,5,6}
-result=a.union(b)
+# Input: {1, 2, 3}, remove 2
+s = {1, 2, 3}
+s.discard(2)
+print(s)
+
+# Union of Two Sets
+# Problem: Find union of two sets.
+# Explanation: Use | operator or union() method.
+
+# Input: {1, 2}, {2, 3}
+set1 = {1, 2}
+set2 = {2, 3}
+result = set1 | set2
+# Output: {1, 2, 3}
 print(result)
+
+# Problem: Find common elements in two sets.
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+common = set1 & set2
+print(common)
 
 #intersection of sets
 a={1,2,3}
