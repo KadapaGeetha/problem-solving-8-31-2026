@@ -1,270 +1,321 @@
-# Set and Dictionary Interview Questions – Problem Statements and Explanations
+# Set and Dictionary Interview Questions – 1 to 30
 
-# Add Element to Set
-# Problem: Add an element to a set.
-# Explanation: Use add() method to add an element to a set.
-# Input: {1, 2, 3}, add 4
+## Set-Based Questions
 
-s = {1, 2, 3}
-s.add(4)
+### 1. Add Element to a Set
 
-# Output: {1, 2, 3, 4}
-print(s)
+```python
+a = {1, 2, 3}
+a.add(4)
+print(a)
+```
 
+### 2. Remove Element from Set
 
-# Remove Element from Set
-# Problem: Remove a specific element from a set.
-# Explanation: Use remove() or discard() to avoid KeyError.
-# Input: {1, 2, 3}, remove 2
+```python
+a = {1, 2, 3}
+a.remove(2)
+print(a)
+```
 
-s = {1, 2, 3}
-s.discard(2)
+### 3. Union of Two Sets
 
-# Output: {1, 3}
-print(s)
+```python
+a = {1, 2}
+b = {2, 3}
+c = a.union(b)
+print(c)
+```
 
+### 4. Intersection of Sets
 
-# Union of Two Sets
-# Problem: Find union of two sets.
-# Explanation: Use | operator or union() method.
-# Input: {1, 2}, {2, 3}
+```python
+a = {1, 2}
+b = {2, 3}
+print(a & b)
+```
 
-set1 = {1, 2}
-set2 = {2, 3}
+### 5. Difference of Sets
 
-result = set1 | set2
+```python
+a = {1, 2, 3}
+b = {2, 3}
+print(a - b)
+```
 
-# Output: {1, 2, 3}
-print(result)
+### 6. Check Subset
 
+```python
+a = {1, 2}
+b = {1, 2, 3}
+c = a.issubset(b)
+print(c)
+```
 
-# Intersection of Two Sets
-# Problem: Find common elements in two sets.
-# Explanation: Use & operator or intersection().
-# Input: {1, 2, 3}, {2, 3, 4}
+### 7. Set Length
 
-set1 = {1, 2, 3}
-set2 = {2, 3, 4}
+```python
+a = {1, 2, 3}
+b = len(a)
+print(b)
+```
 
-result = set1 & set2
+### 8. Clear a Set
 
-# Output: {2, 3}
-print(result)
-
-
-# difference of sets
-a={1,2,3}
-b={2,3}
-result = a - b
-print(result)
-
-#check subset
-a={1,2}
-b={1,2,3}
-print(a.issubset(b))
-
-#length of set
-a={1,2,3}
-#print(len(a))
+```python
+a = {1, 2, 3}
 a.clear()
 print(a)
+```
 
-#symmetric difference
-a={1,2,3}
-b={2,3,4}
-#result= a ^ b
-#using method
-result = a.symmetric_difference(b)
-print(result)
+### 9. Symmetric Difference
 
-#convert list to set
-a={1,2,2,3}
-r=set(a)
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+r = a.symmetric_difference(b)
 print(r)
+```
 
-#create a dict from two list
-a=['a','b']
-b=[1,2]
-r=dict(zip(a,b))
+### 10. Convert List to Set
+
+```python
+a = [1, 2, 2, 3]
+r = set(a)
 print(r)
+```
 
-#update dictionary value
-a={'a':1}
-a['a']=2 # dict[key]=value
+---
+
+# Dictionary-Based Questions
+
+### 11. Create a Dictionary from Two Lists
+
+```python
+a = ["a", "b"]
+b = [1, 2]
+r = dict(zip(a, b))
+print(r)
+```
+
+### 12. Update Dictionary Value
+
+```python
+a = {"a": 1}
+a["a"] = 2
 print(a)
+```
 
-#remove key from dictionary 
-a={'a':1,'b':2,'c':3}
-a.pop('b')
+### 13. Remove Key from Dictionary
+
+```python
+a = {"a": 1, "b": 2}
+a.pop("b")
 print(a)
+```
 
-#Check Key Existence
-d = {"x": 1}
-print("x" in d)
+### 14. Check Key Existence
 
+```python
+a = {"x": 1}
+b = "x"
+print(b in a)
+```
 
-#Iterate Over Dictionary
-#Use .items() to get both key and value.
+### 15. Iterate Over Dictionary
 
-d = {"a": 10, "b": 20}
+```python
+a = {"a": 10, "b": 20}
 
-for key, value in d.items():
+for key, value in a.items():
     print(key, value)
+```
 
-#Dictionary Length
-d = {"x": 1, "y": 2}
+### 16. Dictionary Length
 
-print(len(d))
+```python
+a = {"x": 1, "y": 2}
+r = len(a)
+print(r)
+```
 
-#Merge Two Dictionaries
-#Using update():
+### 17. Merge Two Dictionaries
 
-d1 = {"a": 1}
-d2 = {"b": 2}
+```python
+a = {"a": 1}
+b = {"b": 2}
 
-d1.update(d2)
-print(d1)
+a.update(b)
+print(a)
+```
 
-#Get Value with Default
-d = {"a": 1}
-print(d.get("b", 0))
+### 18. Get Value with Default
 
-#Count Frequency of Elements
+```python
+a = {"a": 1}
+r = a.get("b", 0)
+print(r)
+```
+
+### 19. Count Frequency of Elements
+
+```python
 numbers = [1, 2, 2, 3]
-
 freq = {}
 
-for num in numbers:
-    if num in freq:
-        freq[num] += 1
-    else:
-        freq[num] = 1
+for num in set(numbers):
+    freq[num] = numbers.count(num)
 
 print(freq)
+```
 
+### 20. Invert a Dictionary
 
-#Invert a Dictionary
-#Keys become values and values become keys.
+```python
+a = {"a": 1, "b": 2}
+invert = {}
 
-d = {"a": 1, "b": 2}
+for key, value in a.items():
+    invert[value] = key
 
+print(invert)
+```
+
+### 21. Find Key with Maximum Value
+
+```python
+a = {"a": 10, "b": 20, "c": 15}
+
+max_value = 0
+max_key = ""
+
+for key, value in a.items():
+    if value > max_value:
+        max_value = value
+        max_key = key
+
+print(max_key)
+```
+
+### 22. Sort Dictionary by Values
+
+```python
+a = {"a": 3, "b": 1, "c": 2}
+
+result = sorted(a.items(), key=lambda x: x[1])
+print(result)
+```
+
+### 23. Create Dictionary of Squares
+
+```python
+a = range(1, 4)
+square = {}
+
+for num in a:
+    square[num] = num * num
+
+print(square)
+```
+
+### 24. Filter Dictionary by Value Condition
+
+```python
+a = {"a": 10, "b": 5, "c": 15}
 result = {}
 
-for key, value in d.items():
-    result[value] = key
-
-print(result)
-
-#Find Key with Maximum Value
-d = {"a": 10, "b": 20, "c": 15}
-
-result = max(d, key=d.get)
-
-print(result)
-
-
-#Sort Dictionary by Values
-d = {"a": 3, "b": 1, "c": 2}
-
-result = sorted(d.items(), key=lambda x: x[1])
-
-print(result)
-
-
-#Create Dictionary of Squares
-result = {}
-
-for i in range(1, 4):
-    result[i] = i ** 2
-
-print(result)
-
-#Filter Dictionary by Value Condition
-#Keep values greater than 10.
-
-d = {"a": 10, "b": 5, "c": 15}
-
-result = {}
-
-for key, value in d.items():
+for key, value in a.items():
     if value > 10:
         result[key] = value
 
 print(result)
+```
 
-#Combine Values of Duplicate Keys
-d1 = {"a": 1, "b": 2}
-d2 = {"a": 3, "c": 4}
+### 25. Combine Values of Duplicate Keys
 
-result = d1.copy()
-
-for key, value in d2.items():
-    if key in result:
-        result[key] += value
-    else:
-        result[key] = value
-
-print(result)
-
-#Count Word Frequency in Sentence
-sentence = "apple banana apple"
-
-words = sentence.split()
-freq = {}
-
-for word in words:
-    if word in freq:
-        freq[word] += 1
-    else:
-        freq[word] = 1
-
-print(freq)
-
-
-#Remove Duplicate Values from Dictionary
-#Keep the first key when values are duplicated.
-
-d = {"a": 1, "b": 2, "c": 1}
+```python
+a = {"a": 1, "b": 2}
+b = {"a": 3, "c": 4}
 
 result = {}
 
-for key, value in d.items():
-    if value not in result.values():
+for key, value in a.items():
+    result[key] = value
+
+for key, value in b.items():
+    if key in result:
+        result[key] = result[key] + value
+    else:
         result[key] = value
 
 print(result)
+```
 
-#Find Common Keys in Two Dictionaries
-d1 = {"a": 1, "b": 2}
-d2 = {"b": 3, "c": 4}
+### 26. Count Word Frequency in Sentence
 
+```python
+text = "apple banana apple"
+words = text.split()
+count = {}
+
+for word in words:
+    if word in count:
+        count[word] = count[word] + 1
+    else:
+        count[word] = 1
+
+print(count)
+```
+
+### 27. Remove Duplicate Values from Dictionary
+
+```python
+a = {"a": 1, "b": 2, "c": 1}
+result = {}
+
+for key in a:
+    if a[key] not in result.values():
+        result[key] = a[key]
+
+print(result)
+```
+
+### 28. Find Common Keys in Two Dictionaries
+
+```python
+a = {"a": 1, "b": 2}
+b = {"b": 3, "c": 4}
 result = []
 
-for key in d1:
-    if key in d2:
+for key in a:
+    if key in b:
         result.append(key)
 
 print(result)
+```
 
-# Swap Keys and Values Safely
-d = {"x": 1, "y": 2}
+### 29. Swap Keys and Values Safely
 
+```python
+a = {"x": 1, "y": 2}
 result = {}
 
-for key, value in d.items():
+for key, value in a.items():
     result[value] = key
 
 print(result)
+```
 
+### 30. Delete Items by Value
 
-# Delete Items by Value
-d = {"a": 1, "b": 2, "c": 1}
-
+```python
+a = {"a": 1, "b": 2, "c": 1}
 result = {}
 
-for key, value in d.items():
+for key, value in a.items():
     if value != 1:
         result[key] = value
 
 print(result)
+```
 
