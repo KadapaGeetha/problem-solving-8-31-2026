@@ -245,3 +245,26 @@ for key in d1:
         result.append(key)
 
 print(result)
+
+# Swap Keys and Values Safely
+d = {"x": 1, "y": 2}
+
+result = {}
+
+for key, value in d.items():
+    result[value] = key
+
+print(result)
+
+
+# Delete Items by Value
+d = {"a": 1, "b": 2, "c": 1}
+
+result = {}
+
+for key, value in d.items():
+    if value != 1:
+        result[key] = value
+
+print(result)
+
